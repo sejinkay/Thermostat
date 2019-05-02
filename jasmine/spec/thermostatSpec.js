@@ -49,4 +49,19 @@ describe('Thermostat', function() {
     thermostat.reset();
     expect(thermostat.temp).toEqual(20);
   });
+
+  it('Checks current energy usage - low', function() {
+    thermostat.temp = 17;
+    expect(thermostat.usage()).toEqual("low-usage");
+  });
+
+  it('Checks current energy usage - medium', function() {
+    thermostat.reset();
+    expect(thermostat.usage()).toEqual("medium-usage");
+  });
+
+  it('Checks current energy usage - high', function() {
+    thermostat.temp = 200;
+    expect(thermostat.usage()).toEqual("high-usage");
+  });
 });
