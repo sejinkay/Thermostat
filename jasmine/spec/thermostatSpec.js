@@ -38,4 +38,15 @@ describe('Thermostat', function() {
     expect(thermostat.PSM).toEqual(false);
     expect(thermostat.MaxTemp).toEqual(32);
   });
+
+  it('Turns on powersave mode', function() {
+    thermostat.switchOn();
+    expect(thermostat.PSM).toEqual(true);
+    expect(thermostat.MaxTemp).toEqual(25);
+  });
+
+  it('Resets the temprature to 20', function() {
+    thermostat.reset();
+    expect(thermostat.temp).toEqual(20);
+  });
 });

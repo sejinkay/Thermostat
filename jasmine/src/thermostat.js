@@ -23,3 +23,12 @@ Thermostat.prototype.switchOff = function() {
   this.PSM = false
   this.MaxTemp = 32
 };
+
+Thermostat.prototype.switchOn = function() {
+  this.PSM = true
+  this.MaxTemp = 25
+};
+
+Thermostat.prototype.reset = function() {
+  this.temp = 20
+};
