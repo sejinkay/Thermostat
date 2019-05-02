@@ -3,6 +3,7 @@ function Thermostat() {
   this.MinTemp = 10
   this.MaxTemp = 25
   this.PSM = true
+  this.status = "ON"
 };
 
 Thermostat.prototype.increase = function() {
@@ -22,11 +23,13 @@ Thermostat.prototype.decrease = function() {
 Thermostat.prototype.switchOff = function() {
   this.PSM = false
   this.MaxTemp = 32
+  this.status = "OFF"
 };
 
 Thermostat.prototype.switchOn = function() {
   this.PSM = true
   this.MaxTemp = 25
+  this.status = "ON"
 };
 
 Thermostat.prototype.reset = function() {

@@ -1,0 +1,3 @@
+class Thermostat:
+    def increase:
+        
