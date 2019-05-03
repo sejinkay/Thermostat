@@ -7,7 +7,7 @@ function Thermostat() {
 };
 
 Thermostat.prototype.increase = function() {
-  if(this.temp === this.MaxTemp){
+  if(this.temp >= this.MaxTemp){
     throw new TypeError ("You reached the maximum temprature!");
   };
     this.temp += 1
