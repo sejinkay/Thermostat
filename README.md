@@ -1,6 +1,7 @@
 # Thermostat
 
 Week 5 Challenge at [Makers Academy](https://makers.tech/)
+
 Checkout the deployed version [Here](https://thermostat-project.herokuapp.com/)
 
 How to run
